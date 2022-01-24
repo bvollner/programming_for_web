@@ -6,7 +6,7 @@ function setup() {
     if (mouseIsPressed) {
       fill(0);
     } else {
-      fill(255);
+      fill(125);
     }
     square(mouseX, mouseY, 80, 10);
   }
