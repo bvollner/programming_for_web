@@ -1,23 +1,26 @@
-let bubble;
+let bubble = [];
 
 function setup() {
     createCanvas(600, 600);
-    bubble = new Bubble ();
+    for (let i = 0; i < 50; i++){
+        let x = random(width)
+        let y = random(height)
+        bubble[i] = new Bubble (x, y)
+}
 }
 
 function draw() {
     background(255);
-    bubble.move();
-    bubble.show();
-    for( let i = 0; i < 10; i++){
-        redraw(bubble);
-    };
+    for (let i = 0; i < bubble.length; i++){
+    bubble[i].move();
+    bubble[i].show();
+}
 }
 
 class Bubble {
-    constructor() {
-        this.x = 300;
-        this.y = 100;
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
     }
 
 move() {
