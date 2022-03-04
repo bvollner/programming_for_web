@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lib/style.css">
+    <title>Llamas and Alpacas</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+    <h1>Alpacas and Llamas</h1>
+    <div id="app" v-cloak>
+        <ul>
+        <li><a v-bind:class= "{active: currentRoute==='alpacaRoute'}" v-bind:style="baseStyle" v-bind:title="alpacaTitle" v-bind:href="alpaca">Come Check out these Alpacas!</a></li>
+        <li><a v-bind:class= "{active: currentRoute==='llamaRoute'}" v-bind:style="baseStyle" v-bind:title="llamaTitle" v-bind:href="llama">Come Check out these Llamas!</a></li>
+        </ul>
+    </div>
+    <script src="lib/ex_7.1.js"></script>
+    
+</body>
+</html>
