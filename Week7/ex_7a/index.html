@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>A Brief Inventory of the Creatures my Wife has Rescued</title>    
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3"></script>   
+</head>
+<body>
+    <h1>A Brief Inventory of the Creatures my Wife has Rescued</h1>
+    <div id="petsApp">
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Animal</th>
+                <th>Breed</th>
+            </thead>
+            <tbody>
+                <tr v-for="(pet, idx) in pets"
+                v-bind:class="{odd: idx % 2 !== 0}">
+                <td>{{pet.name}}</td>
+                <td>{{pet.age}}</td>
+                <td>{{pet.animal}}</td>
+                <td>{{pet.breed}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="pets.js"></script>   
+</body>
+</html>
