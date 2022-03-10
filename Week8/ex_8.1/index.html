@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/vue@3"></script>
+    <title>Exercise 8.1</title>
+</head>
+<body>
+    <div id="alpacaForm" v-cloak>
+        <form>
+            <fieldset>
+                <lengend>The Alpaca Form of Awesomeness</Form></lengend>
+                <!--first name-->
+                <div>
+                    <label for="firstName">First Name</label>
+                    <input id="firstName" v-model="firstName">
+                </div>
+                <!--last name-->
+                <div>
+                    <label for="lastName">Last Name</label>
+                    <input id="lastName" v-model="lastName">
+                </div>
+                <!--address-->
+                <div>
+                    <label for="streetAddress">Street Address</label>
+                    <input id="streetAddress" v-model="streetAddress">
+                </div>
+                <!--city-->
+                <div>
+                    <label for="city">City</label>
+                    <input id="city" v-model="city">
+                </div>
+                <!--state-->
+                <div>
+                    <label for="">State</label>
+                    <select v-model="state">
+                        <option v-for="state in availableStates" v-bind:value="state.value">{{state.name}}</option>               
+
+                    </select>
+                </div>
+                <!--country-->
+                <div></div>
+                <!--alpaca colors-->
+                <div class="alpaca-color">
+                    <p>Favorite Alpaca Colors</p>
+                    <div>
+                        <ul>
+                            <li v-for="color in colors">
+                                <label v-bind:for="color.value">
+                                <input type="checkbox" name="" v-model="selectedColors" v-bind:id="color.value" v-bind:value="color.value">{{color.name}}
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--current alpaca status-->
+                <div class="alpaca-status">
+                    <label>Alpaca Status</label>
+                    <textarea name="" id="" cols="30" rows="10" v-model="status"></textarea>
+                </div>
+            </fieldset>
+            <div class="output">
+                <h3>Output</h3>
+                First Name: {{firstName}}<br>
+                Last Name: {{lastName}}<br>
+                Street Address: {{streetAddress}}<br>
+                City: {{city}}<br>
+                State: {{state}}<br>
+                Color: {{selectedColors}}<br>
+                Status: {{status}}
+            </div>
+        </form>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

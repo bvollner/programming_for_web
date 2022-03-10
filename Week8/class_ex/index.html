@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <fieldset>
+        <label for="fav-color">Favorite Color</label><input id="fav-color" v-model="favColor" type="text">
+            <div>
+                <label for="bio">My Life Story</label>
+                <textarea :placeholder="bioPlaceholder" v-model="bio" name="" id="bio" cols="30" rows="10"></textarea>
+            </div>
+        </fieldset>
+            <div>
+                <label for="chooseState"></label>
+                <select v-model="state" id="chooseState">
+                    <template v-for="statesObj in stateArray" key="statesObj.abbr">
+                        <option value="statesObj.abbr">{{statesObj.label}}</option>
+                    </template>
+                </select>
+            </div>
+            <div>
+                <p>Favorite Annimal</p>
+                <label><input type="radio" v-model>Cat</label>
+                <label><input type="radio" v-model>Dog</label>
+                <label><input type="radio" v-model>Octopus</label>
+            </div>
+            <div>
+                <p>Single Check</p>
+                <label><input type="checkbox" v-model>
+            </div>
+    </div>
+</body>
+</html>
