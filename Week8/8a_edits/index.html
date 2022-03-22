@@ -1,0 +1,75 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>A Brief Inventory of the Creatures my Wife has Rescued</title>    
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@3"></script>   
+</head>
+<body>
+    <h1>A Brief Inventory of the Creatures my Wife has Rescued</h1>
+    <div id="petsApp">
+        <!--Table-->
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Animal</th>
+                <th>Breed</th>
+                <th>Image</th>
+                <th>Is it a pain?</th>
+                <th>Delete</th>
+            </thead>
+            <tbody v-cloak>
+                <tr v-for="(pet, idx) in pets"
+                v-bind:class="{odd: idx % 2 !== 0, pain: pet.pain === 'Yes'}">
+                <td class="name">{{pet.name}}</td>
+                <td>{{pet.age}}</td>
+                <td>{{pet.animal}}</td>
+                <td>{{pet.breed}}</td>
+                <td><img v-bind:src="pet.image" v-bind:title="pet.name + ', the ' + pet.breed" v-bind:alt="pet.name +', the ' + pet.breed"/></td>
+                <td>{{pet.pain}}</td>
+                <td><div class="actions">
+                    <button type="button" v-on:click="deleteItem(pet)">Delete</button>
+                    </div>
+                </td>
+                </tr>
+            </tbody>
+        </table>
+        <!--Form-->
+        <form v-on:submit.prevent="submitHandler">
+            <fieldset>
+                <legend><h2>Help my wife expand her collection by adding your creature today!</h2></legend>
+                <div>
+                    <label for="name">What's the lil dude's name?</label>
+                    <input id="name" type="text" v-model="newPetObj.name">
+                </div>
+                <div>
+                    <label for="age">In years, how old is it?</label>
+                    <input id="age" type="text" v-model="newPetObj.age">
+                </div>
+                <div>
+                    <label for="animal">What kind of creature are you donating?</label>
+                    <input id="animal" type="text" v-model="newPetObj.animal">
+                </div>
+                <div>
+                    <label for="breed">Ok, so be as specific as you can. What breed is it?</label>
+                    <input id="breed" type="text" v-model="newPetObj.breed">
+                </div>
+                <div>
+                    <label for="image">Scour the internet for a picture of your creature, and paste a URL here.</label>
+                    <input id="image" type="text" v-model="newPetObj.image">
+                </div>
+                <div>
+                    <label for="pain">Check the box if your creature is a pain in the butt.</label>
+                    <input id="pain" type="checkbox" v-model="newPetObj.pain">
+                </div>
+                <button id="submit" type="submit">Submit</button>
+            </fieldset>
+        </form>
+    </div>
+
+    <script src="pets.js"></script>   
+</body>
+</html>

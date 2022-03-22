@@ -1,0 +1,77 @@
+[v-cloak] {
+    display: none;
+  }
+  /*text and body styling*/
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: linear-gradient(#003300, white);
+    width: 100%;
+    text-align: center;
+}
+h1 {
+    margin: 1.5em 1.5em 1em 1.5em;
+    color: white;
+}
+h2 {
+    color: #336633;
+    text-align: center;
+}
+.name {
+    color:#003300;
+}
+/*table styling*/
+table, thead, th, tbody, tr, td{
+    color: #808080;
+    border: 0 none;
+    padding: 2em;
+}
+th{
+    color: white;
+}
+thead {
+    background-color: #808080;
+    border: 0 none;
+    padding: 2em;
+}
+table {
+    width: 80%;
+   margin: auto;     
+}
+.odd {
+    background: #ccc;
+}
+.pain {
+    font-style:italic;
+}
+tbody{
+    background: white;
+}
+img {
+    display: flex;
+    margin: auto;
+    max-height: 200px;
+}
+button {
+    background-color: #336633;
+    color:white;
+    display: flex;
+    margin: 10px auto;
+    border: none;
+    padding: 10px 32px;
+    border-radius: 8px;
+}
+/*form styling*/
+form {
+    color: #808080;
+    text-align: left;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+label, input {
+    margin: 5px 0;
+    width: 100%;
+}
+#submit {
+    padding: 10px 48px;
+}
