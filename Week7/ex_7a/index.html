@@ -18,16 +18,18 @@
                 <th>Animal</th>
                 <th>Breed</th>
                 <th>Image</th>
-                <th>Action</th>
+                <th>Is it a pain?</th>
+                <th>Delete</th>
             </thead>
             <tbody v-cloak>
                 <tr v-for="(pet, idx) in pets"
-                v-bind:class="{odd: idx % 2 !== 0}">
+                v-bind:class="{odd: idx % 2 !== 0, pain: pet.pain === 'Yes'}">
                 <td class="name">{{pet.name}}</td>
                 <td>{{pet.age}}</td>
                 <td>{{pet.animal}}</td>
                 <td>{{pet.breed}}</td>
                 <td><img v-bind:src="pet.image" v-bind:title="pet.name + ', the ' + pet.breed" v-bind:alt="pet.name +', the ' + pet.breed"/></td>
+                <td>{{pet.pain}}</td>
                 <td><div class="actions">
                     <button type="button" v-on:click="deleteItem(pet)">Delete</button>
                     </div>
@@ -58,6 +60,10 @@
                 <div>
                     <label for="image">Scour the internet for a picture of your creature, and paste a URL here.</label>
                     <input id="image" type="text" v-model="newPetObj.image">
+                </div>
+                <div>
+                    <label for="pain">Check the box if your creature is a pain in the butt.</label>
+                    <input id="pain" type="checkbox" v-model="newPetObj.pain">
                 </div>
                 <button id="submit" type="submit">Submit</button>
             </fieldset>

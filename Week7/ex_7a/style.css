@@ -13,7 +13,7 @@ h1 {
     color: white;
 }
 h2 {
-    color: white;
+    color: #336633;
     text-align: center;
 }
 .name {
@@ -39,6 +39,9 @@ table {
 }
 .odd {
     background: #ccc;
+}
+.pain {
+    font-style:italic;
 }
 tbody{
     background: white;
