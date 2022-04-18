@@ -1,5 +1,6 @@
 [
     {
+      "id": 1,
       "name": "Opie",
       "animal": "Dog",
       "age": "Ancient",
@@ -8,6 +9,7 @@
       "pain": "true"
     },
     {
+      "id": 2,
       "name": "Muggsy",
       "animal": "Dog",
       "age": "6 years",
@@ -16,6 +18,7 @@
       "pain": "true"
     },
     {
+      "id": 3,
       "name": "Kona",
       "animal": "Dog",
       "age": "2 years",
@@ -24,6 +27,7 @@
       "pain": "true"
     },
     {
+      "id": 4,
       "name": "Jake, Jake from State Farm",
       "animal": "Turtle",
       "age": "16 years",
@@ -32,6 +36,7 @@
       "pain": "true"
     },
     {
+      "id": 5,
       "name": "Biff",
       "animal": "Turtle",
       "age": "16 years",
@@ -40,6 +45,7 @@
       "pain": "false"
     },
     {
+      "id": 6,
       "name": "Spoofer",
       "animal": "Cat",
       "age": "11 years",
@@ -48,6 +54,7 @@
       "pain": "false"
     },
     {
+      "id": 7,
       "name": "Noogie",
       "animal": "Cat",
       "age": "11 years",
@@ -56,6 +63,7 @@
       "pain": "false"
     },
     {
+      "id": 8,
       "name": "Yours Truly",
       "animal": "Human",
       "age": "41 years",
@@ -64,6 +72,7 @@
       "pain": "true"
     },
     {
+      "id": 9,
       "name": "The Teenager",
       "animal": "Human",
       "age": "19 years",

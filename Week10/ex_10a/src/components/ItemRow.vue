@@ -1,11 +1,11 @@
 <script setup>
-import {RouterLink}
-const props = defineProps(["item", "index"]);
-console.log("the item, props.item");
+import {RouterLink} from 'vue-router';
+const props = defineProps(["pet", "index"]);
+console.log("pet", "props.item");
 </script>
 
 <template>
-<RouterLink :to="'/collection'+item.id">
+<RouterLink :to="'/collection'+pet.id">
     <div 
         class="petRow"
         v-bind:class="{
@@ -24,4 +24,55 @@ console.log("the item, props.item");
 </template>
 
 <style>
+[v-cloak] {
+    display: none;
+  }
+  /*text and body styling*/
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: linear-gradient(#003300, white);
+    width: 100%;
+    text-align: center;
+}
+h1 {
+    margin: 1.5em 1.5em 1em 1.5em;
+    color: white;
+}
+h2 {
+    color: #336633;
+    text-align: center;
+}
+.pet-name {
+    color:#003300;
+}
+.petRow {
+    display: flex;
+}
+/*table styling*/
+div {
+    color: #808080;
+    border: 0 none;
+    text-decoration: none; 
+}
+#itemRow {
+    color: white;
+}
+table {
+    width: 80%;
+   margin: auto;     
+}
+.odd {
+    background: #ccc;
+}
+.pet-pain {
+    font-style:italic;
+}
+tbody{
+    background: white;
+}
+img {
+    display: flex;
+    margin: auto;
+    max-height: 200px;
+}
 </style>
