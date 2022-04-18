@@ -4,7 +4,7 @@ let mySound;
 
 function setup() {
     createCanvas(400, 400);
-    song = loadSound("../audio/chopin.mp3", loaded);
+    song = loadSound("audio/chopin.mp3", loaded);
     amp = new p5.Amplitude();
     background(51);
 }
@@ -28,6 +28,7 @@ function togglePlaying() {
     if (!song.isPlaying()){
         song.play();
         song.setVolume(0.3);
+        button.html("pause");
     } else {
         song.stop();
         button.html("play");
