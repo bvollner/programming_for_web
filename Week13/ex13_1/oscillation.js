@@ -3,7 +3,7 @@ var slider2;
 var pos;
 
 function setup() {
-    createCanvas (1000,1000);
+    createCanvas (750,750);
     angleMode(DEGREES);
 
     pos = 0.0;
