@@ -1,11 +1,11 @@
 //Tree - Based off of The Coding Train: Coding Challenge #14//
 // Wind - Based off of CP2: Wind in the Trees - Jeff Thompson //
 
-var angle = 30;
+var angle = 25;
 //perlin noise wind var//
-var windSpeed = 50;
-var noisePos = 20;
-var windInc = 0.01;
+let windSpeed = 90;
+let noisePos = 30;
+let windInc = 0.01;
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
@@ -17,7 +17,7 @@ function draw () {
     stroke("#339900");  
     translate(width/2, height);
     rotate(radians(windSpeed)); //wind//
-    branch(175);   
+    branch(125);   
 }
 
 function branch(len) {
