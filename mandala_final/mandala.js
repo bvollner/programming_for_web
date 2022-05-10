@@ -9,6 +9,9 @@
 //The Coding Train - Mar 24, 2016//
 //https://youtu.be/lm8Y8TD4CTM//
 
+// saveCanvas from p5.js reference and Amy Jo's Week 11.A exercise//
+//https://p5js.org/reference/#/p5/saveCanvas//
+
 let x1, x2, y2, x3, y3, y4;
 
 var r;
@@ -19,14 +22,15 @@ var rslider = 0;
 var gslider = 0;
 var bslider = 0;
 
-//var button1 = createButton("Capture");
-
 function setup() {
     createCanvas(1200, 1200);
     translate(width/2, height/2);
     rslider = createSlider(0, 255, 0, 5);
+    rslider.addClass('red-slider')
     gslider = createSlider(0, 255, 0, 5);
+    gslider.addClass('green-slider')
     bslider = createSlider(0, 255, 0, 5);
+    bslider.addClass('blue-slider');
     //resetSketch//
     resetSketch();
     var button = createButton("Apply");
@@ -94,7 +98,6 @@ function resetSketch(){
     r=r+random(0, 150);
     g=g+random(0, 150);
     b=b+random(0, 150);
-    //capture canvas below//
     }
 }
 

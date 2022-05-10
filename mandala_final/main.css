@@ -1,18 +1,20 @@
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: auto;
-    display: inline;
     text-align: center;
     background-color: #666;
   }
 h1 {
     margin: 30px;
     font-size: 54px;
-    color: #fff;
+    color: #99ccff;
 }  
 p {
     font-size: 24px;
-    color: #99ccff
+    color: #fff;
+}
+.jscript {
+    display: flex;
 }
 button {
     border: none;
@@ -27,3 +29,50 @@ button {
     display: inline-block;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);   
 }
+/* https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/ */
+/* additional styling hints from: https://freefrontend.com/css-range-sliders/ */
+input[type=range] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    background: transparent; /* Otherwise white in Chrome */
+    display: block;
+    width: 300px;
+    margin: 20px auto;
+  }
+  /* green slider */
+  input[type=range].green-slider::-webkit-slider-runnable-track {
+    width: 100%;
+    border-radius: 25px;
+    background: #00ff00;
+  }
+  input[type=range].green-slider:focus::-webkit-slider-runnable-track {
+    outline: none;
+  }
+  input[type=range].green-slider::-moz-range-track{
+    background: #00ff00;
+  }
+
+  /* red slider */
+  input[type=range].red-slider::-webkit-slider-runnable-track{
+    width: 100%;
+    border-radius: 25px;
+    background: #ff0000;
+  }
+  input[type=range].red-slider:focus::-webkit-slider-runnable-track{
+    outline: none;
+  }
+  input[type=range].red-slider::-moz-range-track {
+    background: #ff0000;
+  }
+
+  /* blue slider */
+  input[type=range].blue-slider::-webkit-slider-runnable-track{
+    width: 100%;
+    border-radius: 25px;
+    background: #0000ff;
+  }
+  input[type=range].blue-slider:focus::-webkit-slider-runnable-track{
+    outline: none;
+  }
+  input[type=range].blue-slider::-moz-range-track {
+    background: #0000ff;
+  }
